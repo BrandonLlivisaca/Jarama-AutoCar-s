@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body{
+    
     font-family: sans-serif;
 }
 h1,h2,h3,h4,h5,h6{
@@ -587,10 +588,15 @@ footer{
     --gold: #ded3cd;
 }
 
+div.carousel-inner{
+    /* border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 200px; */
+}
+
 .carousel-inner{
     /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #dd1818, #333333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to left, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(217deg,rgba(255, 255, 0, 1),rgba(0, 0, 0, .2));/* rgba(0, 0, 0, 0) 70.71%);/* #fff700, #fdfdfd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
@@ -627,15 +633,54 @@ background: linear-gradient(to left, #dd1818, #333333); /* W3C, IE 10+/ Edge, Fi
     width: 30%;
     font-size: 50px !important;
     font-weight: 300;
-    color: #fff;
+    color: rgb(0, 0, 0);
     /* text-shadow: 10px 10px 10px rgba(0,0,0,.6); */
     text-shadow: 0 12px 10px rgba(0,0,0,.8);
     font-family: 'Oswald', sans-serif;
     text-align: center;
+    left: 0%;
     /* font: 400 80px/1 arial;
     text-transform: uppercase;
-    text-shadow: 0 9px 0 #41330a; */
-    
-}
+    text-shadow: 0 9px 0 #41330a; */   
+    /* -webkit-animation: animacion 2s ease-out;
+    -moz-animation: animacion 2s ease-out;
+    -ms-animation: animacion 2s ease-out;
+    -o-animation: animacion 2s ease-out;
+    animation: animacion 2s ease-out; */
 
+    -webkit-animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+    animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+}
+@keyframes intro {
+    0% { opacity: 0; }
+    90% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+
+@-webkit-keyframes reveal {
+    80% {
+      letter-spacing: 8px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes reveal {
+    80% {
+      letter-spacing: 8px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @-webkit-keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #fff;
+    }
+  }
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #fff;
+    }
+  }
 
