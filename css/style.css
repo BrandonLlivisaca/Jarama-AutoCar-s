@@ -313,8 +313,8 @@ nav{
     border: 1px solid #fff;
     padding: 10px 0;
     width: 120px;
-   text-align: center; 
-   border-radius: 5px;
+    text-align: center; 
+    border-radius: 5px;
 }
 
 /* SERVICES */
@@ -498,8 +498,8 @@ footer{
         /* display: none; */
         position: fixed;
         background: #36D1DC;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to bottom, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to bottom, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: -webkit-linear-gradient(to bottom, #c5e55b, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(-160deg, #000000, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         top: 0;
         right: 0;
         width: 100%;
@@ -517,7 +517,7 @@ footer{
     }
 
     .nav .enlaces-header a{
-        color: #fff;
+        color: rgb(251, 255, 0);
     }
     .hamburguer{
         display: block;
@@ -565,7 +565,8 @@ footer{
     /* SLIDER */
 
     section.contenido-slider{
-        height: 720px;
+        margin-top: -30px;
+        height: 700px;
         justify-content: space-evenly;
         flex-direction: column;
         text-align: center;
@@ -573,11 +574,15 @@ footer{
     }
  
     section.contenido-slider>img{
-        width: 200px;
+        width: 410px;
     }
 
     section.contenido-slider h2{
         font-size: 25px !important;
+    }
+    section.contenido-slider iframe{
+        margin-top: -40px;
+        height: 615px;
     }
 }
 
