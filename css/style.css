@@ -602,8 +602,9 @@ footer{
 }
 
 .contenido-slider{
+    margin-top: -9px;
     height: 600px;
-    display: block;    
+    display: flex;    
     align-items: center;
 }
 
