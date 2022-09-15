@@ -588,40 +588,33 @@ footer{
     --gold: #ded3cd;
 }
 
-div.carousel-inner{
-    /* border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 200px; */
-}
+
 
 .carousel-inner{
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(217deg,rgba(255, 255, 0, 1),rgba(0, 0, 0, .2));/* rgba(0, 0, 0, 0) 70.71%);/* #fff700, #fdfdfd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+   /*  background: -webkit-linear-gradient(to left, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(217deg,rgba(255, 255, 0, 1),rgba(0, 0, 0, .2));/* rgba(0, 0, 0, 0) 70.71%);/* #fff700, #fdfdfd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .contenedor-slider{
     width: 100%;
     max-width: 100%;
-    margin: auto;
-    overflow: hidden;
 }
 
 .contenido-slider{
-    width: 100%;
     height: 600px;
-    display: flex;
-    justify-content: space-evenly;
+    display: block;    
     align-items: center;
-    padding: 30px;
 }
 
 .contenido-slider>img{
-    width: 550px;
-    border-radius: 10%;
-    box-shadow: 10px 15px 20px 0px rgba(0,0,0,.6);
+    width: 100%;
+    height: 80vh;
+    top: 0;
+    /* border-radius: 10%; */
+   /*  box-shadow: 10px 15px 20px 0px rgba(0,0,0,.6); */
     animation: ease-in animat 1.4s;
+    background-color: blue;
 }
 
 .vertical-align{
