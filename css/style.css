@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 body{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 80%;
+    background-attachment: fixed;
     
     font-family: sans-serif;
 }
@@ -16,6 +21,7 @@ h1,h2,h3,h4,h5,h6{
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
+    
 }
 
 .contenedor1{
@@ -68,6 +74,7 @@ nav{
 }
 
 .enlaces-header{
+    
     font-weight: 300;
     transition: ease-in-out .5s;
 }
@@ -114,34 +121,71 @@ nav{
 }
 
 .textos-header{
-    margin: 0 0 0 30px;
+    margin: 0 10px 0 30px;
     align-items: center;
-    padding: 30px;
+    padding: 10px 20px;
+    background-color: rgba(15, 15, 15,0.6);
+    border-radius: 10%;
+    
 }
 .textos-header h2, .textos-header h1{
    /*  font-size: 20px; */
+   color: rgb(255, 242, 0);
+   text-shadow: 0 5px 5px rgba(28, 25, 25, 0.8);
+   /* animation: changed 4s infinite alternate linear; */
 }
-.contenido-header p{
-    font-weight: 100;
+
+@keyframes changed{
+    0%{
+        color: #ee6055;
+    }
+    25%{
+        color: #60d394;
+    }
+    50%{
+        color: #aaf683;
+    }
+    75%{
+        color: #ffd97d;
+    }
+    100%{
+        color: #ff9b85;
+    }
+}
+
+.contenido-header p, .textos-header h6{
+    font-weight: bold;
     margin-bottom: 14px;
-    color: #5D6678;
+    color: #ffffff;
 }
 
 .contenido-header a{
     margin: 28px 0 0 0;
-    width: 150px;
+    width: 60px;
+    height: 60px;
     display: inline-block;
     text-decoration: none;
     background-color: #1fde82;
-    border-radius: 5px;
+    border-radius: 100%;
     text-align: center;
     color: white;
     padding: 12px 0;
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 24px;
     box-shadow: 0px 8px 32px rgba(31,222,130,.46);
     transition: all 1s;
+    animation: changed_button 1.5s infinite alternate linear;
+}
+
+.contactanos{
+    color: #1fde82;
+    
+}
+
+@keyframes changed_button{
+    from { transform: translate3d(0, 0, 0);}
+    to { transform: translate3d(0, 10px, 0);}
 }
 
 .contenido-header a:hover{
@@ -153,6 +197,8 @@ nav{
 .titulo{
     font-size: 50px;
 }
+
+
 
 /* About us */
 .about-us{
@@ -600,6 +646,7 @@ footer{
    /*  background: -webkit-linear-gradient(to left, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
     /* background: linear-gradient(217deg,rgba(255, 255, 0, 1),rgba(0, 0, 0, .2));/* rgba(0, 0, 0, 0) 70.71%);/* #fff700, #fdfdfd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 
 .contenedor-slider{
     width: 100%;
