@@ -3,12 +3,23 @@ let ubicacionPrincipal = window.pageYOffset;
 /* OCULTAR MENU SEGUN DONDE ESTE EL SCROLL */
 window.addEventListener("scroll",function(){
     let desplazamientoActual = window.pageYOffset;
+    let about = document.getElementById('about-us');
+    let title_services = document.getElementById('title_services');
+    let position = about.getBoundingClientRect().top;
+    let heightWindow = window.innerHeight;
+
     if(ubicacionPrincipal>=desplazamientoActual){
         document.getElementsByTagName("nav")[0].style.top = "0px"
     }else{
         document.getElementsByTagName("nav")[0].style.top = "-100px"
     }
     ubicacionPrincipal = desplazamientoActual;
+
+    if(position < heightWindow){
+        title_services.classList.add('titulo_servicios');
+    }else{
+        title_services.classList.remove('titulo_servicios');
+    }
 })
 
 /* MENU */
@@ -28,3 +39,14 @@ document.querySelectorAll(".hamburguer")[0].addEventListener("click",function(){
     }
     enlacesHeader.classList.toggle("menudos")
 })
+
+const mostrar = function(){
+    let title_services = document.getElementById('title_services');
+    title_services.classList.add('titulo_servicios');
+}
+
+/* Agregar imagenes a los ariculos */
+let articulos = document.getElementsByClassName('fa-solid');
+for(let i=0; i<articulos.length;i++){
+    articulos[i].classList.add('img_article');
+}
