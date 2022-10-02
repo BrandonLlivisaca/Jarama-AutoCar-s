@@ -49,6 +49,6 @@ const mostrar = function(){
 let articulos = document.getElementsByClassName('fa-solid');
 for(let i=0; i<articulos.length;i++){
     articulos[i].classList.add('img_article');
-    let img = 'img/img_'+i+'.jpg';
+    let img = 'img/img_'+(i)+'.jpg';
     articulos[i].style.backgroundImage = `url(${img})`;
 }

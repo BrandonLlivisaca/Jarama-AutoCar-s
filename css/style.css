@@ -17,7 +17,7 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 300;
 }
 .contenedor{
-    width: 90%;
+    width: 100%;
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
@@ -287,9 +287,10 @@ nav{
     border-bottom-right-radius: 58px;
     padding: 45px /* arriba */ 30px /* derecha */ 60px /* abajo */ 30px /*left*/;
     /* box-shadow: 5px 5px 2px rgba(228, 240, 8, 0.3); */
-    transition: 0.3s;
+    /* transition: 0.3s; */
+    background: ghostwhite;
+    /* transition: all 1.2s ease-in-out !important;  */
     box-shadow: 0 4px 10px rgba(17, 29, 48, .26);
-    transition: all 1.2s ease-in-out !important;
 }
 
 .articulo:hover{
@@ -375,9 +376,11 @@ a.cotiza:hover{
 /* Questions */
 .questions{
     height: 600px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #1fde82;
 }
 
 .questions>img{
@@ -412,7 +415,7 @@ a.cotiza:hover{
 
 /* RESULTS */
 .results{
-    background: #2560ff;
+    background: #000000;
     padding-top: 30px;
 }
 
@@ -421,26 +424,58 @@ a.cotiza:hover{
     justify-content: space-evenly;
 }
 
-.numbers{
+/* .numbers{
     width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+} */
+
+.numbers{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.numbers .number{
+/* .numbers .number{
     width: 45%;
     background: rgba(255, 255, 255, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 40px /* arriba y abajo  35px /* lados */;
+    /* margin-bottom: 20px;
+} */
+
+.numbers .number{
+    width: 100%;
+    background: rgba(255, 255, 255, .2) !important;
     color: #fff;
     border-radius: 10px;
     padding: 40px /* arriba y abajo */ 35px /* lados */;
     margin-bottom: 20px;
 }
 
+div.number{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    border-radius: 10px;
+    padding: 40px /* arriba y abajo */ 35px /* lados */;
+    margin-bottom: 20px;
+}
+
+iframe{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 234, 0);
+}
+
 .numbers .number h4{
     color: #fff;
     font-size: 50px;
     font-weight: 500;
+    padding-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -454,26 +489,37 @@ a.cotiza:hover{
 }
 
 .result-text h4{
-    color: #fff;
+    color: rgb(253, 244, 0);
     font-size: 40px;
 }
 
 .result-text p{
     color: #fff;
+    font-size: 18px;
     font-weight: 300;
     margin: 20px 0;
 }
 
 .result-text a{
-    color: #fff;
+    color: #ebd50f;
     text-decoration: none;
     display: inline-block;
-    border: 1px solid #fff;
+    border: 1px solid #ebd50f;
     padding: 10px 0;
     width: 120px;
     text-align: center; 
     border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
+
+.result-text a:hover{
+    border: 2px solid #ebd50f;
+    color: #ebd50f !important;
+    box-shadow: 0 0.9em 0.5em -0.4em #ebd50f;
+    transform: translateY(-0.9em);
+    transition: all 0.25s ease-in-out !important;
+}
+
 
 /* SERVICES */
 .services{
@@ -521,11 +567,32 @@ footer{
     color: #1d273d;
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 30px;
+   /*  margin-bottom: 30px; */
 }
 
 .partFooter img{
-    width: 70%;
+    width: 30%;
+    border-radius: 20px;
+    transform: translateY(20px);
+    animation: log 1.5s infinite alternate linear;
+    transition: all 2s ease-in-out infinite;
+}
+
+@keyframes log {
+    0%{
+        transform: translateY(1em);
+    }50%{
+        box-shadow: -5px 10px 10px 0 rgba(46, 43, 43, 0.4);
+    }100%{
+        transform: translateY(0em);
+        box-shadow: -5px 15px 20px 0 rgba(46, 43, 43, 0.7);
+    }
+}
+
+
+.partFooter img::before{
+    transform: translateY(0px);
+    transition: all 2s ease-in-out infinite;
 }
 
 .partFooter a{
@@ -538,7 +605,7 @@ footer{
 }
 
 .partFooter a:hover{
-    color: #1fde82;
+    color: #ebd50f;
 }
 
 .social-media i{
@@ -558,15 +625,15 @@ footer{
 }
 
 .social-media i:hover{
-    color: #fff;
-    background-color: #1fde82;
-    border-color: #1fde82;
+    color: #ebd50f;
+    background-color: black;
+    border-color: #ebd50f;
 
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1200px){
     .img_article{
-        width: 165px !important;
+        width: 100% !important;
     }
 }
 
@@ -657,7 +724,7 @@ footer{
         margin-bottom: 40px;
     }
     .img_article{
-        width: 190px !important;
+        width: 100% !important;
     }
 
 }
@@ -767,7 +834,7 @@ footer{
     }
 
     .img_article{
-        width: 280px !important;
+        width: 100% !important;
     }
 
    
@@ -785,6 +852,7 @@ footer{
 .contenedor-slider{
     width: 100%;
     max-width: 100%;
+    background: blue;
 }
 
 .contenido-slider{
