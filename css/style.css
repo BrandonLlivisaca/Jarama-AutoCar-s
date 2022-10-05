@@ -737,7 +737,7 @@ footer{
     width: 37%;
 }
 
-.mensaje-text a{
+.mensaje-text button{
     color: #ebd50f;
     text-decoration: none;
     display: inline-block;
@@ -750,7 +750,7 @@ footer{
     transition: all 0.3s ease-in-out;
 }
 
-.mensaje-text a:hover{
+.mensaje-text button:hover{
     border: 2px solid #ebd50f;
     color: #ebd50f !important;
     box-shadow: 0 0.9em 0.5em -0.4em #ebd50f;
@@ -786,6 +786,7 @@ footer{
     }
     .textos-header{
         margin: 0;
+        margin-right: 20px;
     }
 
 
