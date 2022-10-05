@@ -786,7 +786,7 @@ footer{
     }
     .textos-header{
         margin: 0;
-        margin-right: 20px;
+        margin-right: 25px;
     }
 
 
@@ -860,6 +860,25 @@ footer{
         width: 400px;
     }
 
+    /* CONTACTANOS */
+    .contactanos{
+        width: 80%;
+    }
+    .user-box input{
+        width: 100%;
+    }
+    .user-box textarea{
+        width: 100%;
+    }
+    .contactanos .mensaje-text{
+        width: 100%;
+        text-align: center;
+    }
+
+    .contacts{
+        margin-top: 20px;
+        width: 100%;
+    }
     /* FOOTER */
     footer{
         justify-content: space-evenly;
