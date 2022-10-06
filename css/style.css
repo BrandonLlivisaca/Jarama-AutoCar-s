@@ -683,11 +683,17 @@ footer{
 
 .contacts .contact{
     width: 45%;
-    background: rgba(255, 255, 255, .2);
+    height: 45%;
+    background: rgba(9, 9, 9, 0.2);
     color: #fff;
     border-radius: 10px;
     padding: 40px /* arriba y abajo  */ 35px /* lados */;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.46);
 }
 
 .user-box {
@@ -764,6 +770,23 @@ footer{
 }
    */
 /* ----------------- */
+
+.contact i{
+    width: 20% !important;
+    padding: 10px;
+    font-size: 40px;
+    color: #000;
+}
+
+.contact p{
+    font-size: 25px;
+    color: #ebd50f;
+}
+
+.contact a{
+    font-size: 18px;
+    color: #ebd50f;
+}
 
 @media screen and (max-width: 1200px){
     .img_article{
