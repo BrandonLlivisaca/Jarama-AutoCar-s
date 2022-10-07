@@ -675,6 +675,7 @@ footer{
     resize: none;
 }
 .contacts{
+    margin-top: 20px;
     width: 50%;
     display: flex;
     flex-wrap: wrap;
@@ -683,11 +684,11 @@ footer{
 
 .contacts .contact{
     width: 45%;
-    height: 45%;
-    background: rgba(9, 9, 9, 0.2);
+    height: 35%;
+    background: rgb(0, 0, 0);
     color: #fff;
-    border-radius: 10px;
-    padding: 40px /* arriba y abajo  */ 35px /* lados */;
+    border-radius: 6px;
+    
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -710,7 +711,7 @@ footer{
     outline: none;
     background: transparent;
 }
-
+/* rgb(174, 167, 167) */
 .user-box label{
     color: #e5b506;
     position: absolute;
@@ -774,12 +775,12 @@ footer{
 .contact i{
     width: 20% !important;
     padding: 10px;
-    font-size: 40px;
-    color: #000;
+    font-size: 30px;
+    color: #ebd50f;
 }
 
 .contact p{
-    font-size: 25px;
+    font-size: 20px;
     color: #ebd50f;
 }
 
@@ -901,7 +902,35 @@ footer{
     .contacts{
         margin-top: 20px;
         width: 100%;
+        display: flex;
+
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
     }
+
+    .contacts .contact{
+        width: 40%;
+        height: 60px;
+        padding: 0;
+        background-color: rgb(38, 36, 36);
+        /* border: 1px solid #ebd50f; */
+    }
+    .contact p{
+        margin-top: 13px;
+        font-size: 10px;
+        color: #ebd50f;
+    }
+    .contact i{
+        font-size: 10px;
+        color: #ebd50f;
+    }
+    .contact a{
+        font-size: 8px;
+        color: #ebd50f;
+    }
+
+   
     /* FOOTER */
     footer{
         justify-content: space-evenly;
