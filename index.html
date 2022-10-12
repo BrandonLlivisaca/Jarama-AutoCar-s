@@ -228,31 +228,38 @@
 
         <section class="contactanos">
             <h4>Contacto</h4>
-            <form action="">
+            <form id="form">
                 <div class="user-box">
-                    <input type="text" name="" required>
+                    <input type="text" name="name" required>
                     <label>Nombre</label>
                 </div>
                 <div class="user-box">
-                    <input type="email" name="" required="">
+                    <input type="email" name="email" required="">
                     <label>Correo</label>
                 </div>
                 <div class="user-box">
-                    <input type="text" name="" required="">
+                    <input type="text" name="asunto" required="">
                     <label>Asunto</label>
                 </div>
 
                 <div class="user-box">
-                    <textarea name="" id="" cols="64" rows="8" placeholder="Mensaje..."></textarea>
+                    <textarea name="mensaje" id="" cols="64" rows="8" placeholder="Mensaje..."></textarea>
                 </div>
                 
                 
                 <!-- <input class="submit" type="submit" value="Enviar"> -->
-                <section class="mensaje-text">
-                    <button>Enviar</button>
-                </section>
+                <!-- <section class="mensaje-text">
+                    <button id="button" type="submit">Enviar</button>
+                </section> -->
+
+                <input type="submit" id="button" value="Enviar Mensaje" >
             </form>
 
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+            <script type="text/javascript">
+                emailjs.init('JyCXjx1UBzDEfXuIv')
+            </script>
         </section>
         <!-- <img src="img/services.jpg" alt="" class=""> -->
         <!-- <div class="box-skills">
@@ -298,4 +305,26 @@
     <script src="js/main.js"></script>
     
 </body>
+    <script>
+        const btn = document.getElementById('button');
+
+        document.getElementById('form')
+        .addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        btn.value = 'Enviando...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_yw7o8tb';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+            btn.value = 'ENVIAR MENSAJE';
+            alert('Mensaje enviado correctamente!');
+            }, (err) => {
+            btn.value = 'ENVIAR MENSAJE';
+            alert(JSON.stringify(err));
+            });
+        });
+    </script>
 </html>
