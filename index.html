@@ -24,9 +24,9 @@
                 <div class="enlaces-header">
                     <a href="#">INICIO</a>
                     <a href="#nosotros">NOSOTROS</a>
-                    <a href="#">SERVICIOS</a>
-                    <a href="#">CLIENTES</a>
-                    <a href="#">CONTÁCTENOS</a>                    
+                    <a href="#about-us">SERVICIOS</a>
+                    <!-- <a href="#">CLIENTES</a> -->
+                    <a href="#contactanos">CONTÁCTENOS</a>                    
                 </div>
                 <div class="hamburguer">
                     <i class="fa-solid fa-bars"></i>
@@ -94,7 +94,7 @@
 
     </header>
 
-    <section class="inicio contenedor">
+    <section class="inicio contenedor" id="nosotros">
         <section class="textos-inicio">
             <div class="textos-header">
                 <h1>JARAMA AUTOCAR'S</h1>
@@ -226,9 +226,9 @@
             </div>
         </section>
 
-        <section class="contactanos">
+        <section id="contactanos" class="contactanos">
             <h4>Contacto</h4>
-            <form id="form">
+            <form id="form" method="POST">
                 <div class="user-box">
                     <input type="text" name="name" required>
                     <label>Nombre</label>
@@ -246,13 +246,14 @@
                     <textarea name="mensaje" id="" cols="64" rows="8" placeholder="Mensaje..."></textarea>
                 </div>
                 
-                
                 <!-- <input class="submit" type="submit" value="Enviar"> -->
                 <!-- <section class="mensaje-text">
                     <button id="button" type="submit">Enviar</button>
                 </section> -->
 
-                <input type="submit" id="button" value="Enviar Mensaje" >
+                <section class="mensaje-text">
+                    <input type="submit" id="button" value="Enviar Mensaje" >
+                </section>
             </form>
 
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -305,7 +306,7 @@
     <script src="js/main.js"></script>
     
 </body>
-    <script>
+    <!-- <script>
         const btn = document.getElementById('button');
 
         document.getElementById('form')
@@ -326,5 +327,6 @@
             alert(JSON.stringify(err));
             });
         });
-    </script>
+        
+    </script> -->
 </html>

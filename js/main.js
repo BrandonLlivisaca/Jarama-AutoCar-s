@@ -52,3 +52,29 @@ for(let i=0; i<articulos.length;i++){
     let img = 'img/img_'+(i)+'.jpg';
     articulos[i].style.backgroundImage = `url(${img})`;
 }
+
+const btn = document.getElementById('button');
+
+btn.addEventListener('click',function(){
+    enviarMail();
+})
+
+function enviarMail(){
+    document.getElementById('form').addEventListener('submit',function(event){
+        event.preventDefault();
+        btn.value = 'Enviando...';
+    const serviceID = 'default_service';
+    const templateID = 'template_yw7o8tb';
+
+    emailjs.sendForm(serviceID, templateID, this)
+    .then(()=>{
+        btn.value = 'Enviar Mensaje';
+        alert('Mensaje enviado correctamente!');
+        location.reload();
+        },(err) =>{
+            btn.value = 'Enviar Mensaje';
+            alert(JSON.stringify(err));
+        });
+
+    })
+}

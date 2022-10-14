@@ -744,7 +744,7 @@ footer{
     width: 37%;
 }
 
-.mensaje-text button{
+.mensaje-text input{
     color: #ebd50f;
     text-decoration: none;
     display: inline-block;
@@ -757,10 +757,10 @@ footer{
     transition: all 0.3s ease-in-out;
 }
 
-.mensaje-text button:hover{
+.mensaje-text input:hover{
     border: 2px solid #ebd50f;
     color: #ebd50f !important;
-    box-shadow: 0 0.9em 0.5em -0.4em #ebd50f;
+    box-shadow: -0.5em 0.9em 0.5em -0.4em #3d3c36;
     transform: translateY(-0.9em);
     transition: all 0.25s ease-in-out !important;
 }
